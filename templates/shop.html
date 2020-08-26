@@ -1,0 +1,287 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="text-gray-700 body-font">
+  <div class="container px-5 py-24 mx-auto">
+    <div class="flex flex-wrap -m-4">
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="data:image/jpeg;base64,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">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">SKIN CARE</h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">NIVEA Soft, Light Moisturising Cream, 300ml</h2>
+          <p class="mt-1">₹250</p>
+           <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+      Buy Now
+    </button>
+          <!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="staticBackdropLabel">About this product</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h2 class="text-gray-900 title-font text-lg font-medium">NIVEA Soft, Light Moisturising Cream, 300ml</h2>
+          <p class="mt-1">₹250</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center  h-full block" src="https://upload.wikimedia.org/wikipedia/commons/2/23/Dove_shampoo.jpg">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">SKIN CARE</h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">Dove shampoo</h2>
+          <p class="mt-1">₹199</p>
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop1">
+      Buy Now
+    </button>
+          <!-- Modal -->
+<div class="modal fade" id="staticBackdrop1" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="staticBackdropLabel">About this product</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h2 class="text-gray-900 title-font text-lg font-medium">Dove shampoo</h2>
+          <p class="mt-1">₹199</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center block" src="data:image/jpeg;base64,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">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">by Apple</h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">Apple iPhone 11 (64GB) - Black</h2>
+          <p class="mt-1">₹ 59,900.00</p>
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop3">
+      Buy Now
+    </button>
+          <!-- Modal -->
+<div class="modal fade" id="staticBackdrop3" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="staticBackdropLabel">About this product</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h2 class="text-gray-900 title-font text-lg font-medium">Apple iPhone 11 (64GB) - Black</h2>
+          <p class="mt-1">₹ 59,900.00</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center  block" src="data:image/jpeg;base64,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">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">External Devices & Data Storage</h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">SanDisk Cruzer Blade 32GB USB Flash Drive</h2>
+          <p class="mt-1">₹ 399.00 </p>
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop4">
+      Buy Now
+    </button>
+          <!-- Modal -->
+<div class="modal fade" id="staticBackdrop4" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="staticBackdropLabel">About this product</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h2 class="text-gray-900 title-font text-lg font-medium">SanDisk Cruzer Blade 32GB USB Flash Drive</h2>
+          <p class="mt-1">₹ 399.00 </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center  block" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQDQGuuYcbMmZ4_hBYco6Yvf4MHO-YrO8u9KH359aSvdPTIVXRHZ3vQu5_LMEgWcUkHj327REY&usqp=CAc">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Headphones</h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">OnePlus Bullets Wireless Z in-Ear Bluetooth Earphones with Mic (Black)</h2>
+          <p class="mt-1">₹ 1,999.00</p>
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop5">
+      Buy Now
+    </button>
+          <!-- Modal -->
+<div class="modal fade" id="staticBackdrop5" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="staticBackdropLabel">About this product</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h2 class="text-gray-900 title-font text-lg font-medium">OnePlus Bullets Wireless Z in-Ear Bluetooth Earphones with Mic (Black)</h2>
+          <p class="mt-1">₹ 1,999.00</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center  block" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTqnMe3Luil-1WDAML6yXgzQraYBl-7UMnrviGR-dhIV86quZH0bmeMAFaBJw&usqp=CAc">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">T-Shirts & Polos</h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">Cenizas Men's Full Sleeves Solid Stripes Round Neck Tshirt/T-Shirt</h2>
+          <p class="mt-1">₹ 299.00</p>
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop6">
+      Buy Now
+    </button>
+          <!-- Modal -->
+<div class="modal fade" id="staticBackdrop6" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="staticBackdropLabel">About this product</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+         <h2 class="text-gray-900 title-font text-lg font-medium">Cenizas Men's Full Sleeves Solid Stripes Round Neck Tshirt/T-Shirt</h2>
+          <p class="mt-1">₹ 299.00</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center  block" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRwAGaHpAfKkqhxb9hkO7RYJfkWMoCpagc-aJeGOjEUtoKPM6uY4VUiOjOZwiTaXn8uduBwIRK5&usqp=CAc">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Routers</h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">JioFi JDR740 (Dongle) 150Mbps Wireless 4G Portable Router</h2>
+          <p class="mt-1">₹ 2,049.00 </p>
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop7">
+      Buy Now
+    </button>
+          <!-- Modal -->
+<div class="modal fade" id="staticBackdrop7" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="staticBackdropLabel">About this product</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h2 class="text-gray-900 title-font text-lg font-medium">JioFi JDR740 (Dongle) 150Mbps Wireless 4G Portable Router</h2>
+          <p class="mt-1">₹ 2,049.00 </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+      <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
+        <a class="block relative h-48 rounded overflow-hidden">
+          <img alt="ecommerce" class="object-cover object-center  block" src="data:image/jpeg;base64,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">
+        </a>
+        <div class="mt-4">
+          <h3 class="text-gray-500 text-xs tracking-widest title-font mb-1">Men's Shoes</h3>
+          <h2 class="text-gray-900 title-font text-lg font-medium">TYING Men-1200 Black Running Shoes for Men</h2>
+          <p class="mt-1">₹ 259.00</p>
+              <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full" type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop8">
+      Buy Now
+    </button>
+          <!-- Modal -->
+<div class="modal fade" id="staticBackdrop8" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="staticBackdropLabel">About this product</h2>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <h2 class="text-gray-900 title-font text-lg font-medium">TYING Men-1200 Black Running Shoes for Men</h2>
+          <p class="mt-1">₹ 259.00</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Buy Now</button>
+      </div>
+    </div>
+  </div>
+</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+{% endblock %}
